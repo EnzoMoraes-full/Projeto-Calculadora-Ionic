@@ -1,0 +1,95 @@
+<ion-content class="custom-content">
+
+<ion-header [translucent]="true">
+ 
+</ion-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="calculator"></ion-icon>     Calculadora <ion-icon name="calculator"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="light" expand="full" (click)="operador('^')"><ion-icon name="arrow-up-outline"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="light" (click)="operador('√')">√</ion-button>
+      </ion-col>
+    
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="all" (click)="numeral('1')">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="all" (click)="numeral('2')">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="all" (click)="numeral('3')">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="op" (click)="operador('/')">/</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="all"(click)="numeral('4')">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="all" (click)="numeral('5')">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="all" (click)="numeral('6')">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="op" (click)="operador('*')">x</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="all" (click)="numeral('7')">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="all" (click)="numeral('8')">8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="all" (click)="numeral('9')">9</ion-button>
+      </ion-col>
+      <ion-col>
+       
+       <ion-button expand="full" color="op" (click)="operador('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" color="all" (click)="numeral('0')">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="limpar" (click)="faxina()">CE</ion-button>
+
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="result" (click)="calculamento()">=</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" color="op" (click)="operador('+')">+</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item>
+    <ion-icon name="happy"></ion-icon>  <ion-input [(ngModel)]="resultado" type="text" color="op" disabled></ion-input><ion-icon name="happy"></ion-icon>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  
+    <ion-title>
+      &copy; Enzo F. Moraes | 
+      <a href="https://github.com/TI-Enzo-TI" target="_blank">https://github.com/TI-Enzo-TI</a>
+    </ion-title>
+</ion-footer>
